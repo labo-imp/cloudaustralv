@@ -30,7 +30,7 @@ export mlflow_usuario="labo2025"
 export mlflow_clave="constructivism"
 
 repo_check_directory="src/rpart"
-repo_check_file="z0201_ComparandoModelos.ipynb"
+repo_check_file="z102_FinalTrain.ipynb"
 
 tabulador="	"
 logfile="/home/$USER/install/log_install.txt"
