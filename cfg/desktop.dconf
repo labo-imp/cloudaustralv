@@ -1,0 +1,83 @@
+[com/ubuntu/update-notifier]
+release-check-time=uint32 1747698593
+
+[desktop/ibus/general]
+preload-engines=['xkb:latam::spa']
+version='1.5.32'
+
+[org/gnome/deja-dup]
+backend='google'
+
+[org/gnome/desktop/app-folders]
+folder-children=['System', 'Utilities', 'YaST', 'Pardus']
+
+[org/gnome/desktop/app-folders/folders/Pardus]
+categories=['X-Pardus-Apps']
+name='X-Pardus-Apps.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/System]
+apps=['nm-connection-editor.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.baobab.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.Logs.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Sysprof.desktop', 'org.gnome.SystemMonitor.desktop']
+name='X-GNOME-Shell-System.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['org.gnome.FileRoller.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.seahorse.Application.desktop']
+name='X-GNOME-Shell-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[org/gnome/desktop/background]
+color-shading-type='solid'
+picture-uri='none'
+primary-color='#000000'
+
+[org/gnome/desktop/input-sources]
+current=uint32 0
+sources=[('xkb', 'latam'), ('xkb', 'us')]
+
+[org/gnome/desktop/screensaver]
+lock-delay=uint32 1200
+lock-enabled=true
+
+[org/gnome/desktop/session]
+idle-delay=uint32 600
+
+[org/gnome/evolution-data-server]
+migrated=true
+
+[org/gnome/nautilus/preferences]
+migrated-gtk-settings=true
+
+[org/gnome/shell]
+disabled-extensions=@as []
+enabled-extensions=['Vitals@CoreCoding.com', 'executor@raujonas.github.io']
+favorite-apps=['thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'libreoffice-writer.desktop', 'yelp.desktop', 'firefox_firefox.desktop', 'google-chrome.desktop', 'brave-browser.desktop', 'org.gnome.Terminal.desktop', 'htop.desktop', 'jupyterlab.desktop', 'R.desktop', 'rstudio.desktop', 'code.desktop', 'reposync.desktop', 'repobrutalcopy.desktop']
+welcome-dialog-last-shown-version='48.0'
+
+[org/gtk/gtk4/settings/file-chooser]
+show-hidden=false
+sort-directories-first=false
+
+[org/gnome/shell/extensions/executor]
+center-commands-json='{"commands":[]}'
+left-commands-json='{"commands":[{"isActive":true,"command":"echo $HOSTNAME | /usr/bin/cut -d . -f1","interval":3600,"uuid":"d347d862-0989-4760-864b-d3f2e8cc35c5"}]}'
+location=0
+right-commands-json='{"commands":[]}'
+
+[org/gnome/shell/extensions/vitals]
+hot-sensors=['_memory_usage_', '_processor_usage_']
+show-fan=false
+show-network=false
+show-processor=true
+show-storage=false
+show-system=false
+show-temperature=false
+show-voltage=false
+
+[org/gnome/system/location]
+enabled=false

@@ -1,0 +1,14 @@
+[Unit]
+Description=shutdown mlflow
+After=network.target services_recrear@%i.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStop=/usr/bin/Rscript  /home/%i/install/shutdown_mlflow.r
+WorkingDirectory=/home/%i/
+User=%i
+Group=%i
+
+[Install]
+WantedBy=multi-user.target

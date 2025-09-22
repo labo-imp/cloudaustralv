@@ -1,0 +1,13 @@
+[Unit]
+Description=shared dirs
+After=services_recrear@%i.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/%i/install/shareddirs.sh
+WorkingDirectory=/home/%i/install
+User=%i
+Group=%i
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=buckets
+After=services_recrear@%i.service
+
+[Service]
+Type=forking
+ExecStart=/home/%i/cloud-install/direct/linkear_buckets.sh
+WorkingDirectory=/home/%i/
+User=%i
+Group=%i
+
+[Install]
+WantedBy=default.target

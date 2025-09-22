@@ -1,0 +1,13 @@
+[Unit]
+Description=jupyterlab
+After=services_recrear@%i.service
+
+[Service]
+Type=simple
+ExecStart=/home/%i/install/jupyterlab.sh
+WorkingDirectory=/home/%i/
+User=%i
+Group=%i
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,3 @@
+tracking_uri: http://mlflow.rebelare.com/$mlflow_usuario/
+tracking_username: $mlflow_usuario
+tracking_password: $mlflow_clave

@@ -1,0 +1,13 @@
+[Unit]
+Description=autoexec
+After=services_recrear@%i.service  buckets@%i.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/%i/cloud-install/direct/autoexec.sh
+WorkingDirectory=/home/%i/
+User=%i
+Group=%i
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=alive mlflow job
+After=services_recrear@%i.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/Rscript /home/%i/install/alive_mlflow.r
+WorkingDirectory=/home/%i/
+User=%i
+Group=%i

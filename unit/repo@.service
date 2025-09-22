@@ -1,0 +1,13 @@
+[Unit]
+Description=repo
+After=services_recrear@%i.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/%i/install/startup_repos.sh
+WorkingDirectory=/home/%i/
+User=%i
+Group=%i
+
+[Install]
+WantedBy=default.target
