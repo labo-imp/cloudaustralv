@@ -1,0 +1,11 @@
+[Unit]
+Description=halfswap
+After=services_recrear@%i.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/%i/cloud-install/direct/halfswap.sh
+WorkingDirectory=/home/%i/
+
+[Install]
+WantedBy=default.target

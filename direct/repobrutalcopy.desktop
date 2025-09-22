@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Brutal copia del repo al bucket
+Comment=Copia brutalmente el repo al bucket
+Exec=bash /home/$USER/install/repobrutalcopy.sh
+Icon=/home/$USER/install/khabylame.png
+Terminal=true
+Type=Application
+StartupNotify=false

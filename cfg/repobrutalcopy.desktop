@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Sincronizacion del Repositorio
+Comment=Sincroniza repo catedra
+Exec=bash /home/$USER/install/repobrutalcopy.sh
+Icon=/home/$USER/install/khabylame.png
+Terminal=true
+Type=Application
+StartupNotify=false

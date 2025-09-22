@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Sincronizacion del Repositorio
+Comment=Sincroniza repo catedra
+Exec=bash /home/$USER/install/reposync.sh
+Icon=/home/$USER/install/github.png
+Terminal=true
+Type=Application
+StartupNotify=false

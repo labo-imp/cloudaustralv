@@ -1,0 +1,12 @@
+[Unit]
+Description=alive mlflow
+
+[Timer]
+Unit=alive_mlflow@%i.service
+OnUnitActiveSec=60s
+OnBootSec=60s
+OnStartupSec=60s
+
+[Install]
+WantedBy=timers.target
+
