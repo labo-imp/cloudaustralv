@@ -1,0 +1,14 @@
+[Unit]
+Description=services recrear
+
+
+[Service]
+Type=oneshot
+ExecStart=/home/%i/install/services_recrear.sh
+WorkingDirectory=/home/%i/
+User=%i
+Group=%i
+ExecStartPre= /bin/sh -c 'until ping -c1 github.com; do sleep 1; done;'
+
+[Install]
+WantedBy=default.target

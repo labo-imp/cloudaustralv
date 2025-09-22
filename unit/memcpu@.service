@@ -1,0 +1,14 @@
+[Unit]
+Description=memcpu
+After=display-manager.service buckets@%i.service
+Wants=display-manager.service
+
+[Service]
+Type=simple
+ExecStart=/home/%i/cloud-install/direct/memcpu.sh
+WorkingDirectory=/home/%i/log/
+User=%i
+Group=%i
+
+[Install]
+WantedBy=display-manager.service
