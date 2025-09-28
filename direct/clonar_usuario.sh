@@ -74,8 +74,11 @@ if [ ! $? -eq 0 ]; then
 fi
 
 git checkout -b catedra
-git commit --allow-empty  -m "catedra empty"
+git fetch upstream
+git merge --no-ff  --allow-unrelated-histories  upstream/catedra  -m "sync upstream/catedra to catedra"
 
+git commit --allow-empty  -m "catedra empty"
+git pull --rebase  origin catedra
 git push  origin  catedra
 if [ ! $? -eq 0 ]; then
   echo "Error Fatal: en clonar_usuario.sh no pude hacer : git push  origin  catedra"
