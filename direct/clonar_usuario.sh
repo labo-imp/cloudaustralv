@@ -46,6 +46,26 @@ git config  user.email "$github_email"
 git config  user.name "$github_nombre"
 
 
+git rev-parse  --veryfy develop
+if [ ! $? -eq 0 ]; then
+  git checkout -b develop origin/develop
+  if [ ! $? -eq 0 ]; then
+    echo "Error Fatal: en clonar_usuario.sh no pude hacer : git checkout -b develop origin/develop"
+    exit 1
+  fi
+fi
+
+
+git rev-parse  --veryfy main
+if [ ! $? -eq 0 ]; then
+  git checkout -b main origin/main
+  if [ ! $? -eq 0 ]; then
+    echo "Error Fatal: en clonar_usuario.sh no pude hacer : git checkout -b main origin/main"
+    exit 1
+  fi
+fi
+
+
 MIHOST=$(echo $HOSTNAME | /usr/bin/cut -d . -f1)
 git remote  add  upstream  https://github.com/"$github_catedra_user"/"$github_catedra_repo"
 if [ ! $? -eq 0 ]; then
@@ -55,7 +75,12 @@ fi
 
 git checkout -b catedra
 git commit --allow-empty  -m "catedra empty"
+
 git push  origin  catedra
+if [ ! $? -eq 0 ]; then
+  echo "Error Fatal: en clonar_usuario.sh no pude hacer : git push  origin  catedra"
+  exit 1
+fi
 
 git checkout catedra
 git fetch upstream
