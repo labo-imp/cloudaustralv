@@ -46,12 +46,15 @@ git config  user.email "$github_email"
 git config  user.name "$github_nombre"
 
 
-git rev-parse  --veryfy develop
-if [ ! $? -eq 0 ]; then
-  git checkout -b develop origin/develop
+git rev-parse  --veryfy origin/develop
+if [ $? -eq 0 ]; then
+  git rev-parse  --veryfy develop
   if [ ! $? -eq 0 ]; then
-    echo "Error Fatal: en clonar_usuario.sh no pude hacer : git checkout -b develop origin/develop"
-    exit 1
+    git checkout -b develop origin/develop
+    if [ ! $? -eq 0 ]; then
+      echo "Error Fatal: en clonar_usuario.sh no pude hacer : git checkout -b develop origin/develop"
+      exit 1
+    fi
   fi
 fi
 
