@@ -1,5 +1,5 @@
 #!/bin/bash
-# fecha revision   2025-09-22  13:55
+# fecha revision   2025-11-05  10:13
 
 logito="ins_rworld_final.txt"
 # si ya corrio esta seccion, exit
