@@ -1,5 +1,5 @@
 #!/bin/bash
-# fecha revision   2025-09-22  13:55
+# fecha revision   2025-11-05  10:13
 
 logito="ins_buckets.txt"
 # si ya corrio esta seccion, exit
@@ -11,10 +11,10 @@ logito="ins_buckets.txt"
 
 source  /home/$USER/cloud-install/sh/common.sh
 
-# instalo Google Cloud Fuse  para poder ver el bucket  Version:  3.3.0 | Released:2025-09-08
+# instalo Google Cloud Fuse  para poder ver el bucket  Version:  3.4.3 | Released:2025-11-05
 # Documentacion https://cloud.google.com/storage/docs/gcs-fuse?hl=en-419
 
-gcsfusever="3.3.0"
+gcsfusever="3.4.4"
 gcsfusepack="gcsfuse_"$gcsfusever"_amd64.deb"
 cd
 curl  -L -O "https://github.com/GoogleCloudPlatform/gcsfuse/releases/download/v$gcsfusever/$gcsfusepack"
