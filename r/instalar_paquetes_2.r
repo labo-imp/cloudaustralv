@@ -15,7 +15,7 @@ paq8 <- c("SHAPforxgboost", "shapr", "mlflow", "visNetwork")
 paq9 <- c("iml","primes","RhpcBLASctl")
 paq10 <- c("mlr3","mlr3mbo","mlr3learners","mlr3tuning","bbotk","treeClust")
 paq11 <- c("DBI","RMariaDB","filelock","Boruta","lime")
-paq12 <- c("h2o","agua","automl")
+paq12 <- c("h2o","agua","automl","emoa","mco")
 
 paq <- c( paq1, paq2, paq3, paq4, paq5, paq6, paq7, paq8, paq9, paq10, paq11, paq12 )
 

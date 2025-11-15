@@ -108,7 +108,7 @@ gcloud compute instances create instance-instalacion \
     --service-account="$myserviceaccount" \
     --scopes=https://www.googleapis.com/auth/cloud-platform \
     --tags=http-server,https-server \
-    --create-disk=auto-delete=yes,boot=yes,device-name=instance-instalacion,image=projects/ubuntu-os-cloud/global/images/ubuntu-minimal-2404-noble-amd64-v20250828,mode=rw,size=50,type=pd-balanced \
+    --create-disk=auto-delete=yes,boot=yes,device-name=instance-instalacion,image=projects/ubuntu-os-cloud/global/images/ubuntu-minimal-2404-noble-amd64-v20251111,mode=rw,size=50,type=pd-balanced \
     --no-shielded-secure-boot \
     --shielded-vtpm \
     --shielded-integrity-monitoring \
